@@ -1,22 +1,9 @@
-import discord
-import datetime
-import asyncio
-import random
-import json
-import urllib.request
-import urllib.parse
-import re
+from discord.ext import commands
 import os
 import traceback
 
-from discord.ext import commands
-
-bot = commands.Bot(command_prefix="k!",help_command=commands.HelpCommand(command_attrs={'hidden': True}))
-client = discord.Client()
-
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-members = {
-    "たつどん": 'https://media.discordapp.net/attachments/741658483711279175/755460447834210424/image0.jpg',}
 
 
 @bot.event
