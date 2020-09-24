@@ -3,7 +3,7 @@ import os
 import traceback
 
 
-bot = commands.Bot(command_prefix="s-",status=discord.Status.online)
+bot = commands.Bot(command_prefix=('t!','t.'))
 token = os.environ['DISCORD_BOT_TOKEN']
 bot.owner_id = 541290054447005706
 
