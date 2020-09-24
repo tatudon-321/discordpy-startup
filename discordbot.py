@@ -21,6 +21,12 @@ async def ping(ctx):
 @bot.command()
 async def say(ctx, *, text):
     await ctx.send(text)
+    
+bot.remove_command("help")
+
+@bot.command
+async def help(ctx):
+    await ctx.send('未実装です。いずれ作ります')
 
 @bot.event
 async def on_ready():
