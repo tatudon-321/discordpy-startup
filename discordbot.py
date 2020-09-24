@@ -24,7 +24,7 @@ async def say(ctx, *, text):
     
 bot.remove_command("help")
 
-@bot.command
+@bot.command()
 async def help(ctx):
     await ctx.send('未実装です。いずれ作ります')
 
