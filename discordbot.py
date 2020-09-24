@@ -6,17 +6,17 @@ import traceback
 bot = commands.Bot(command_prefix=('t.','t!','T.','T!'))
 token = os.environ['DISCORD_BOT_TOKEN']
 
-
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
+#エラーログ出すやつ
+#@bot.event
+#async def on_command_error(ctx, error):
+    #orig_error = getattr(error, "original", error)
+    #error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
+    #await ctx.send(error_msg)
 
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f'{ctx.bot.latency * 1000} ms')
+    await ctx.send(f'PONG!|このbotのping|{ctx.bot.latency * 1000} ms|')
 
 @bot.command()
 async def say(ctx, *, text):
