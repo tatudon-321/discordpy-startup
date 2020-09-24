@@ -34,4 +34,9 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=activity)
     print("Bot is ready!")
     
+@bot.event
+async def on_ready(): # botが起動したときに動作する処理
+    print('ログインしました')
+    await client.change_presence(activity=discord.Game(name="製作者|たつどん#2239", type=1))
+    
 bot.run(token)
