@@ -3,8 +3,9 @@ import os
 import traceback
 
 
-bot = commands.Bot(command_prefix="t!",status=discord.Status.idle)
+bot = commands.Bot(command_prefix="s-",status=discord.Status.invisible)
 token = os.environ['DISCORD_BOT_TOKEN']
+bot.owner_id = 541290054447005706
 
 #エラーログ出すやつ
 #@bot.event
