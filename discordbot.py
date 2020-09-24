@@ -3,7 +3,7 @@ import os
 import traceback
 
 
-bot = commands.Bot(command_prefix="t.",status=discord.Status.idle)
+bot = commands.Bot(command_prefix="t!",status=discord.Status.idle)
 token = os.environ['DISCORD_BOT_TOKEN']
 
 #エラーログ出すやつ
