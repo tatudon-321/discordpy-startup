@@ -28,8 +28,12 @@ bot.remove_command("help")
 async def help(ctx):
     await ctx.send('未実装です。いずれ作ります')
 
+@bot.command()
+async def invite(ctx):
+    await ctx.send('このbotの招待url|https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot')
+
     
-@bot.event
+@client.event
 async def on_ready(): # botが起動したときに動作する処理
     print('bot is ready!!')
     await client.change_presence(activity=discord.Game(name="製作者|たつどん#2239", type=1))
