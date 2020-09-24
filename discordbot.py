@@ -28,15 +28,10 @@ bot.remove_command("help")
 async def help(ctx):
     await ctx.send('未実装です。いずれ作ります')
 
-@bot.event
-async def on_ready():
-    activity = discord.Game(name="t!help\n prefix→t! !t t. tatu\n owner @たつどん#2239\n 公式サーバー→作成中", type=3)
-    await bot.change_presence(status=discord.Status.online, activity=activity)
-    print("Bot is ready!")
     
 @bot.event
 async def on_ready(): # botが起動したときに動作する処理
-    print('ログインしました')
+    print('bot is ready!!')
     await client.change_presence(activity=discord.Game(name="製作者|たつどん#2239", type=1))
     
 bot.run(token)
