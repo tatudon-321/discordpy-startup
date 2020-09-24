@@ -16,9 +16,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    embed = discord.Embed(title='pingの測定結果', description='PONG!', color=0x000000)
-    embed.add_field(name='結果', value=f'{ctx.bot.latency * 1000} ms')
-    await ctx.send(embed=embed)
+    await ctx.send(f'{ctx.bot.latency * 1000} ms')
 
 @bot.command()
 async def say(ctx, *, text):
