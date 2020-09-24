@@ -83,15 +83,6 @@ async def help(ctx):
 @bot.command()
 async def invite(ctx):
     await ctx.send('このbotの招待url|https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot')
-
-@tasks.loop(minutes=1.0)
-async def cRPC():
-    global rpcct
-    if rpcct==7:
-        rpcct=0
-    else:
-        rpcct=rpcct+1
-    await bot.change_presence(status=discord.Status.online,activity=discord.Game(name=rpcs[rpcct].format(len(bot.guilds),len(bot.users))))
     
 @bot.event
 async def on_ready(): # botが起動したときに動作する処理
