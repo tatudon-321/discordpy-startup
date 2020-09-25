@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import typing
 
 
 bot = commands.Bot(command_prefix=('t!','t.'))
@@ -37,5 +38,9 @@ async def invite(ctx):
 async def on_ready(): # botが起動したときに動作する処理
     print('bot is ready!!')
     await client.change_presence(activity=discord.Game(name="製作者|たつどん#2239", type=1))
+    
+@bot.command()
+async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
+    await ctx.send('{} bottles of {} on the wall!'.format(amount, liquid))
     
 bot.run(token)
