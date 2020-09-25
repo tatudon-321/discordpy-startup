@@ -43,4 +43,13 @@ async def on_ready(): # botが起動したときに動作する処理
 async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
     await ctx.send('{} bottles of {} on the wall!'.format(amount, liquid))
     
+async def is_owner(ctx):
+    return ctx.author.id == 316026178463072268
+
+@bot.command(name='eval')
+@commands.check(is_owner)
+async def _eval(ctx, *, code):
+    """A bad example of an eval command"""
+    await ctx.send(eval(code))
+    
 bot.run(token)
