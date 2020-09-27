@@ -32,6 +32,12 @@ async def help(ctx):
     embed = discord.Embed(title="Hi!!",description="How are you?")
     await channel.send(embed=embed)
 
+
+@bot.command()
+async def discordpy(ctx):
+    embed = discord.Embed(description='a')
+    await ctx.channel.send(embed=embed)
+
 @bot.command()
 async def invite(ctx):
     await ctx.send('このbotの招待url|https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot')
