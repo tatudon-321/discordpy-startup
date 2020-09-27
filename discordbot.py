@@ -15,6 +15,11 @@ bot.owner_id = 541290054447005706
     #error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     #await ctx.send(error_msg)
 
+@bot.command()
+async def p(ctx):
+    embed = discord.Embed(title='pingの測定結果', description='PONG!', color=0x000000)
+    embed.add_field(name='結果', value=f'{ctx.bot.latency * 1000} ms')
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def ping(ctx):
