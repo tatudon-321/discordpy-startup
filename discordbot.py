@@ -28,7 +28,9 @@ bot.remove_command("help")
 
 @bot.command()
 async def help(ctx):
-    await ctx.send('未実装です。いずれ作ります')
+    await ctx.send
+    embed = discord.Embed(title="Hi!!",description="How are you?")
+    await channel.send(embed=embed)
 
 @bot.command()
 async def invite(ctx):
