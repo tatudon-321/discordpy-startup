@@ -2,6 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 import typing
+import discord
 
 
 bot = commands.Bot(command_prefix=('t!','t.'))
