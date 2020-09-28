@@ -19,7 +19,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     embed = discord.Embed(title='pingの測定結果', description='PONG!', color=0x000000)
-    embed.add_field(name=' ', value=f'{ctx.bot.latency * 1000} ms')
+    embed.add_field(name=none, value=f'{ctx.bot.latency * 1000} ms')
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -30,10 +30,12 @@ bot.remove_command("help")
 
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title='このbotのコマンドのhelpです', color=0x00000)
+    embed = discord.Embed(title='このbotのコマンドのhelpです', color=0x000000)
 
 @bot.command()
 async def invite(ctx):
+    embed = discord.Embed(title='このbotの招待リンク', description='下の青い文字をタップ or クリックすると招待できます。', color=0x000000)
+    embed.add_field(name=[このBOTの招待](<https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot>', value=
     await ctx.send('このbotの招待url|https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot')
     
 @bot.command()
