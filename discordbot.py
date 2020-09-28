@@ -31,12 +31,14 @@ bot.remove_command("help")
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title='このbotのコマンドのhelpです', color=0x000000)
+    embed.add_field(name='help　このコマンドを表示', value='製作中')
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def invite(ctx):
     embed = discord.Embed(title='このbotの招待リンク', description='下の青い文字をタップ or クリックすると招待できます。', color=0x000000)
-    embed.add_field(name=[このBOTの招待](<https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot>', value=
-    await ctx.send('このbotの招待url|https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot')
+    embed.add_field(name='[このBOTの招待](<https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot>)', value='[公式サーバー](<https://discord.gg/pSZGXqZ>)')
+    await ctx.send(embed=embed)
     
 @bot.command()
 async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
