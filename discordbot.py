@@ -44,6 +44,12 @@ async def invite(ctx):
 async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
     await ctx.send('{} bottles of {} on the wall!'.format(amount, liquid))
     
+@bot.event
+async def on_ready():
+    activity = discord.Game(name="t!help\n prefix→t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSGXqZ", type=3)
+    await bot.change_presence(status=discord.Status.online, activity=activity)
+    print("Bot is ready!")
+    
 async def is_owner(ctx):
     return ctx.author.id == 316026178463072268
 
