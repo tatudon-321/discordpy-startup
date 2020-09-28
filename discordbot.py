@@ -47,8 +47,14 @@ async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
 @bot.event
 async def on_ready():
     activity = discord.Game(name="t!help\n prefix→t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSGXqZ", type=3)
-    await bot.change_presence(status=discord.Status.online, activity=activity)
+    await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
+    
+@bot.command()
+async def update(ctx):
+    embed = discord.Embed(title='このbotの最新のアップデート情報', color=0x600000)
+    embed.add_field(name='アクティビティにヘルプコマンドの使い方とprefix、owner公式サーバーのurlを表示させました。', value='次回のアップデートに期待してください！\n アップデート日時|9/28 20:34')
+    await ctx.send(embed=embed)
     
 async def is_owner(ctx):
     return ctx.author.id == 316026178463072268
