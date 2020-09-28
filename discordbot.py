@@ -52,7 +52,7 @@ async def on_ready():
     
 @bot.command()
 async def update(ctx):
-    embed = discord.Embed(title='このbotの最新のアップデート情報', color=0x600000)
+    embed = discord.Embed(title='このbotの最新のアップデート情報', description='ver.1.0.2', color=0x600000)
     embed.add_field(name='アクティビティにヘルプコマンドの使い方とprefix、owner公式サーバーのurlを表示させました。', value='次回のアップデートに期待してください！\n アップデート日時|9/28 20:34')
     await ctx.send(embed=embed)
     #バージョンもくわえる！
