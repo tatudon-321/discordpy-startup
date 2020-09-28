@@ -46,7 +46,7 @@ async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
     
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="t!help\n prefix→t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSGXqZ", type=3)
+    activity = discord.Game(name="prefix|t! t.\n t!help\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
     
