@@ -1,9 +1,24 @@
-from discord.ext import commands
-import os
-import traceback
-import typing
-import discord
 import random
+from discord.ext import commands
+import asyncio
+import traceback
+import discord
+import inspect
+import textwrap
+import importlib
+from contextlib import redirect_stdout
+import io
+import os
+import re
+import sys
+import copy
+import time
+import subprocess
+from typing import Union, Optional
+
+# to expose to the eval command
+import datetime
+from collections import Counter
 
 
 bot = commands.Bot(command_prefix=('t!','t.'))
