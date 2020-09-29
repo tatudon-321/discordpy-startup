@@ -84,7 +84,8 @@ async def update(ctx):
     
 async def is_owner(ctx):
     return ctx.author.id == 316026178463072268
- @commands.command(pass_context=True, hidden=True, name='eval')
+
+@commands.command(pass_context=True, hidden=True, name='eval')
     async def _eval(self, ctx, *, body: str):
         """Evaluates a code"""
 
