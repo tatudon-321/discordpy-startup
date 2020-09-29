@@ -3,6 +3,7 @@ import os
 import traceback
 import typing
 import discord
+import random
 
 
 bot = commands.Bot(command_prefix=('t!','t.'))
