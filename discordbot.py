@@ -58,7 +58,7 @@ async def on_ready():
 
 @bot.command()
 async def dice(ctx):
-    await ctx.send(random.randint(1,6)
+    await ctx.send('…')
     
 @bot.command()
 async def update(ctx):
