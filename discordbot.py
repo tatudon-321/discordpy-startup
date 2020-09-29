@@ -55,6 +55,10 @@ async def on_ready():
     activity = discord.Game(name="t!help|prefix|t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
+
+@bot.command()
+async def dice(ctx):
+    await ctx.send(random.randint(1,6)
     
 @bot.command()
 async def update(ctx):
