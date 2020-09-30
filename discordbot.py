@@ -59,6 +59,10 @@ async def invite(ctx):
 @bot.command()
 async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
     await ctx.send('{} bottles of {} on the wall!'.format(amount, liquid))
+  
+@bot.command()
+async def t(ctx, amount: typing.Optional[int] = 1, *, liquid="beer"):
+    await ctx.send('{}回{}をはたきます^ ^'.format(amount, liquid))
     
 @bot.event
 async def on_ready():
