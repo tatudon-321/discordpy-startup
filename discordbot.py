@@ -95,6 +95,11 @@ async def on_message(message):
     if "!じゃんけん" in message.content:
         word_list = ["グー","チョキ","パー"]
         await message.channel.send(random.choice(word_list))
+        
+@bot.command()
+async def jan(ctx):
+    word_list = ["ぐー","ちょき","ぱー"]
+    await ctx.send(random.choice(word.list))
 
     
     
