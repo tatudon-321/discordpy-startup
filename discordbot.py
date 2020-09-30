@@ -13,7 +13,6 @@ import re
 import sys
 import copy
 import time
-from typing
 
 
 bot = commands.Bot(command_prefix=('t!','t.'))
