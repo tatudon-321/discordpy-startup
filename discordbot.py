@@ -66,7 +66,7 @@ async def t(ctx, amount: typing.Optional[int] = 1, *, liquid="beer"):
     
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="t!help|prefix|t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ", type=3)
+    activity = discord.Game(name="t!help|prefix|t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ\n ver.2.0.1", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
 
@@ -81,14 +81,6 @@ async def update(ctx):
     await ctx.send(embed=embed)
     #バージョンもくわえる！
  #botを止める用  
-@bot.event
-async def on_message(message):
-    if "!stop" in message.content:
-        if message.author.id == 541290054447005706:
-            await message.channel.send("ばいばーい！")
-            await client.logout()
-        else:
-            await message.channel.send("管理者専用コマンドだよ！")
            
 
     
