@@ -47,7 +47,7 @@ bot.remove_command("help")
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title='このbotのコマンドのhelpです', color=0x000000)
-    embed.add_field(name='help　このコマンドを表示',value='製作中です')
+    embed.add_field(name='help　このコマンドを表示\n ping  botのping速度を測ります\n invite  botの招待リンク、公式サーバーのリンクを送信します\n a',value='製作中です')
     await ctx.send(embed=embed)
 
 @bot.command()
