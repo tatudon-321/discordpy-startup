@@ -13,12 +13,7 @@ import re
 import sys
 import copy
 import time
-import subprocess
-from typing import Union, Optional
-
-# to expose to the eval command
-import datetime
-from collections import Counter
+from typing
 
 
 bot = commands.Bot(command_prefix=('t!','t.'))
