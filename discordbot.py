@@ -80,6 +80,16 @@ async def update(ctx):
     embed.add_field(name='アクティビティにヘルプコマンドの使い方とprefix、owner公式サーバーのurlを表示させました。', value='次回のアップデートに期待してください！\n アップデート日時|9/28 20:34')
     await ctx.send(embed=embed)
     #バージョンもくわえる！
+ #botを止める用  
+@bot.event
+async def on_message(message):
+    if "!stop" in message.content:
+        if message.author.id == 541290054447005706:
+            await message.channel.send("ばいばーい！")
+            await client.logout()
+        else:
+            await message.channel.send("管理者専用コマンドだよ！")
+
     
     
 bot.run(token)
