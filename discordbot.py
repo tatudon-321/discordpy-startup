@@ -16,7 +16,7 @@ import time
 import typing
 
 
-bot = commands.Bot(command_prefix=('t!','t.'))
+bot = commands.Bot(command_prefix=('t!','t.','T!','T.'))
 token = os.environ['DISCORD_BOT_TOKEN']
 bot.owner_id = 541290054447005706
 
@@ -77,8 +77,8 @@ async def dice(ctx):
     
 @bot.command()
 async def update(ctx):
-    embed = discord.Embed(title='このbotの最新のアップデート情報', description='ver.2.0.1', color=0x080000)
-    embed.add_field(name='updateコマンドの修正をしました。', value='次回のアップデートに期待してください！\n アップデート日時|10/2 00:12')
+    embed = discord.Embed(title='このbotの最新のアップデート情報', description='ver.2.0.2', color=0x080000)
+    embed.add_field(name='prefixが大文字でも反応するようにしました', value='次回のアップデートに期待してください！\n アップデート日時|10/2 20:14')
     await ctx.send(embed=embed)
     #バージョンもくわえる！
  #botを止める用  
