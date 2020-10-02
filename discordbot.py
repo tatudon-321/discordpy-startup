@@ -29,8 +29,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def embed(ctx, *, text):
-    embed.add_field(name=text, value=text)
-    await ctx.send(embed=embed)
+    await ctx.send(text)
 
 @bot.command()
 async def ping(ctx):
