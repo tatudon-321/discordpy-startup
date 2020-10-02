@@ -65,6 +65,13 @@ async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
 async def htkz(ctx, amount: typing.Optional[int] = 1, *, liquid="beer"):
     await ctx.send('{}回{}をはたきます^ ^'.format(amount, liquid))
     
+@bot.command()
+async def prefix(ctx):
+    embed = discord.Embed(title='このbotのprefix一覧', color=0x900000)
+    embed.add_field(name='`t! T! t. T.', value='a')
+    await ctx.send(embed=embed)
+    
+    
 @bot.event
 async def on_ready():
     activity = discord.Game(name="t!help|prefix|t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ\n ver.2.0.1", type=3)
