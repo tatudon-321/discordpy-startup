@@ -29,8 +29,7 @@ async def on_command_error(ctx, error):
     
 @bot.command()
 async def embed(ctx, *, text):
-    embed = discord.Embed(color=0x800000)
-    embed.add_field(name=text, value='\n')
+    embed = discord.Embed(description=text, color=0x800000)
     await ctx.send(embed=embed)
 
 @bot.command()
