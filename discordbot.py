@@ -42,13 +42,6 @@ async def ping(ctx):
 async def say(ctx, *, text):
     await ctx.send(text)
     
-@bot.event
-async def on_message(message):
-    if message.content.upper().startswith("t.say"):
-        args = message.content.split(" ")
-        await bot.send_message(message.channel, "%s" % (" ".join(args[1:])))
-        await bot.delete_message(message)
-    
 bot.remove_command("help")
 
 @bot.command()
