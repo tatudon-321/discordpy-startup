@@ -31,6 +31,11 @@ async def on_command_error(ctx, error):
 async def embed(ctx, *, text):
     embed = discord.Embed(description=text, color=0x800000)
     await ctx.send(embed=embed)
+    
+@bot.command
+async def sa(ctx, *, message:discord.ext.commands.clean_content()):
+    await ctx.send(message)
+    await ctx.message.delete()
 
 @bot.command()
 async def ping(ctx):
