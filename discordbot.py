@@ -53,7 +53,7 @@ async def help(ctx):
 @bot.command()
 async def invite(ctx):
     embed = discord.Embed(title='このbotの招待リンク', description='下の青い文字をタップ or クリックすると招待できます。', color=0x000000)
-    embed.add_field(name='[このBOTの招待](<https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=0&scope=bot>)', value='[公式サーバー](<https://discord.gg/pSZGXqZ>)')
+    embed.add_field(name='[このBOTの招待](<https://discord.com/api/oauth2/authorize?client_id=728281988892721254&permissions=8&scope=bot>)', value='[公式サーバー](<https://discord.gg/pSZGXqZ>)')
     await ctx.send(embed=embed)
     
 @bot.command()
