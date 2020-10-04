@@ -14,9 +14,10 @@ import sys
 import copy
 import time
 import typing
+import tasks
 
 
-bot = commands.Bot(command_prefix=('t!','t.','T!','T.'))
+bot = commands.Bot(command_prefix=('y!','y.','Y!','Y.'))
 token = os.environ['DISCORD_BOT_TOKEN']
 bot.owner_id = 541290054447005706
 
@@ -73,7 +74,7 @@ async def htkz(ctx, amount: typing.Optional[int] = 1, *, liquid="beer"):
 @bot.command()
 async def prefix(ctx):
     embed = discord.Embed(title='このbotのprefix一覧', color=0x900000)
-    embed.add_field(name='`t! T! t. T.', value='a')
+    embed.add_field(name='**y! y. Y! Y.**', value='')
     await ctx.send(embed=embed)
     
     
