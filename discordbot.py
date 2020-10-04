@@ -78,14 +78,7 @@ async def prefix(ctx):
     embed.add_field(name='**y! y. Y! Y.**', value='.')
     await ctx.send(embed=embed)
     
-    
-@tasks.loop(seconds=60)
-async def loop():
-    # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '07:00':
-        channel = client.get_channel(762251971151265792)
-        await channel.send('::atk')  
+   
     
     
 @bot.event
