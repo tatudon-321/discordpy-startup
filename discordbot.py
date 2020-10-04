@@ -6,6 +6,7 @@ import discord
 import inspect
 import textwrap
 import importlib
+import tasks
 from contextlib import redirect_stdout
 import io
 import os
@@ -14,6 +15,7 @@ import sys
 import copy
 import time
 import typing
+from datetime import datetime
 
 
 bot = commands.Bot(command_prefix=('y!','y.','Y!','Y.'))
@@ -75,6 +77,15 @@ async def prefix(ctx):
     embed = discord.Embed(title='このbotのprefix一覧', color=0x900000)
     embed.add_field(name='**y! y. Y! Y.**', value='.')
     await ctx.send(embed=embed)
+    
+    
+@tasks.loop(seconds=60)
+async def loop():
+    # 現在の時刻
+    now = datetime.now().strftime('%H:%M')
+    if now == '07:00':
+        channel = client.get_channel(762251971151265792)
+        await channel.send('::atk')  
     
     
 @bot.event
