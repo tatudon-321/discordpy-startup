@@ -74,13 +74,13 @@ async def htkz(ctx, amount: typing.Optional[int] = 1, *, liquid="beer"):
 @bot.command()
 async def prefix(ctx):
     embed = discord.Embed(title='このbotのprefix一覧', color=0x900000)
-    embed.add_field(name='**y! y. Y! Y.**', value='')
+    embed.add_field(name='**y! y. Y! Y.**', value='.')
     await ctx.send(embed=embed)
     
     
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="t!help|prefix|t! t.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ\n ver.2.0.1", type=3)
+    activity = discord.Game(name="y!help|prefix|y! y.\n owner @たつどん#2239\n 公式サーバー→discord.gg/pSZGXqZ\n ver.2.0.1", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
 
