@@ -6,7 +6,6 @@ import discord
 import inspect
 import textwrap
 import importlib
-import tasks
 from contextlib import redirect_stdout
 import io
 import os
