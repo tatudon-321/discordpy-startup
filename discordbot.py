@@ -28,6 +28,9 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
+@bot.command(pass_context = True)
+async def kick(ctx, userName: discord.User):
+       await bot.kick(userName)
     
 @bot.command()
 async def embed(ctx, *, text):
