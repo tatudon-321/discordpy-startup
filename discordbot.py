@@ -77,8 +77,7 @@ async def prefix(ctx):
     embed.add_field(name='**y! y. Y! Y.**', value='.')
     await ctx.send(embed=embed)
     
-   
-    
+
     
 @bot.event
 async def on_ready():
