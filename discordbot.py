@@ -28,14 +28,10 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
-class Slapper(commands.Converter):
-    async def convert(self, ctx, argument):
-        to_slap = random.choice(ctx.guild.members)
-        return '{0.author} slapped {1} because *{2}*'.format(ctx, to_slap, argument)
-
 @bot.command()
-async def slap(ctx, *, reason: Slapper):
-    await ctx.send(reason)
+async def dice(ctx):
+    dice = random.randint(1, 6) #出る目を指定
+    await message.send_message(message.channel, str(dice))
     
 @bot.command()
 async def embed(ctx, *, text):
