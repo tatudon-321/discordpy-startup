@@ -28,9 +28,11 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
-@bot.command(pass_context = True)
-async def kick(ctx, userName: discord.User):
-       await bot.kick(userName)
+@bot.command()
+async def kick(ctx, member: discord.Member, *, reason=None):
+    await member.kick (reason=reason)
+    embed = discord.Embed (description=f'**実行者:{ctx.author}**', color=0x888000)
+    await ctx.send(embed=embed)
     
 @bot.command()
 async def embed(ctx, *, text):
