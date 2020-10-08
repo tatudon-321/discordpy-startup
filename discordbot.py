@@ -57,16 +57,13 @@ async def ping(ctx):
     embed.add_field(name=f'{ctx.bot.latency * 1000} ms', value='PONG!')
     await ctx.send(embed=embed)
 
-@bot.command()
-async def s(ctx, *, text):
-    await ctx.send(text)
     
 bot.remove_command("help")
 
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title='このbotのコマンドのhelpです', color=0x000000)
-    embed.add_field(name='help　このコマンドを表示\n**ping**  botのping速度を測ります\n**invite**  botの招待リンク、公式サーバーのリンクを送信します\n**embed** [text] textに書いたメッセージをembedに載せて送信します\nkick [user] 未実装です',value='製作中です')
+    embed.add_field(name='help　このコマンドを表示\n**ping**  botのping速度を測ります\n**invite**  botの招待リンク、公式サーバーのリンクを送信します\n**embed** [text] textに書いたメッセージをembedに載せて送信します\nkick [user] ユーザーをキックできます\nban [user] ユーザーをバンできます',value='製作中です')
     await ctx.send(embed=embed)
 
 @bot.command()
