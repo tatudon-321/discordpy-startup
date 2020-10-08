@@ -29,7 +29,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
     
 @bot.command()
-async def kick(ctx, member: discord.Member, *, reason=f'実行者:{ctx.author} , by優姫-ゆき-):
+async def kick(ctx, member: discord.Member, *, reason=f'実行者:{ctx.author} , by優姫-ゆき-'):
     await member.kick (reason=reason)
     embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x888000)
     await ctx.send(embed=embed)
