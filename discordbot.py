@@ -16,6 +16,8 @@ import time
 import typing
 from datetime import datetime
 
+client = discord.Client() # 接続するクライアント
+
 
 bot = commands.Bot(command_prefix=('y!','y.','Y!','Y.'))
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -28,7 +30,7 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
- @bot.event
+ @client.event
 async def on_message(test): # イベント
     print(message.content) # 処理
 
