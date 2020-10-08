@@ -16,7 +16,7 @@ import time
 import typing
 from datetime import datetime
 
-client = discord.Client() # 接続するクライアント
+
 
 
 bot = commands.Bot(command_prefix=('y!','y.','Y!','Y.'))
@@ -29,12 +29,7 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
-    
- @client.event
-async def on_message(test): # イベント
-    print(message.content) # 処理
 
-client.run(token)
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
