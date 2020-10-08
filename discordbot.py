@@ -28,17 +28,17 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
-@bot.command()
-async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
+#@bot.command()
+#async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
     #await member.kick (reason=reason)
-    embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x888000)
-    await ctx.send(embed=embed)
+   # embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x888000)
+  #  await ctx.send(embed=embed)
     
-@bot.command()
-async def ban(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
+#@bot.command()
+#async def ban(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
     #await member.ban (reason=reason)
-    embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x800000)
-    await ctx.send(embed=embed)
+    #embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x800000)
+    #await ctx.send(embed=embed)
     
 @bot.command()
 async def embed(ctx, *, text):
