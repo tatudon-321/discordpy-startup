@@ -28,6 +28,12 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
     
+ @bot.event
+async def on_message(test): # イベント
+    print(message.content) # 処理
+
+client.run(token)
+    
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
     #await member.kick (reason=reason)
