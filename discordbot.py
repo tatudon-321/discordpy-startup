@@ -57,7 +57,7 @@ async def on_command_error(ctx, error):
         
 @bot.command()
 async def wait(ctx):
-    await channel.send('testって送信してね')
+    await ctx.send('testって送信してね')
     
     def check(m):
         return m.content == 'test' and m.channel == channel
