@@ -60,7 +60,7 @@ async def wait(ctx):
     await channel.send('testって送信してね')
     
     def check(m):
-        return m.comtent == 'test' and m.channel == channel
+        return m.content == 'test' and m.channel == channel
     
     msg = await bot.wait_for('message', check=check)
     await channel.send('{.author}さん。成功です。'.format(msg))
