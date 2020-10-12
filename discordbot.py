@@ -65,7 +65,7 @@ async def wait(ctx):
     msg = await bot.wait_for('message', check=check)
     await channel.send('{.author}さん。成功です。'.format(msg)
         
-#@bot.event
+#@bot.event 
 #async def on_message(message):
     #if message.content.startswith('$thumb'):
         #channel = message.channel
