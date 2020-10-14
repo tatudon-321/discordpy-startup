@@ -72,13 +72,8 @@ async def he(ctx):
     
     def check(m):
         return m.content == '1' and m.channel == ctx.channel
-
-        try:
-            reaction, user = await bot.wait_for('message_send', timeout=5.0, check=check)
-        except asyncio.TimeoutError:
-            await channel.send('👎')
-        else:
-            await channel.send('👍')
+    
+    await ctx.send('///')
         
 #@bot.event 
 #async def on_message(message):
