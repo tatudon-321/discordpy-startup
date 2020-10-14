@@ -64,6 +64,16 @@ async def wait(ctx):
     
     msg = await bot.wait_for('message', check=check)
     await ctx.send('Hello {.author}!'.format(msg))
+    
+@bot.command()
+async def he(ctx):
+    await ctx.send('ページ番号を送信するとhelpのページが変わります(このページは0です)')
+    
+    def check(m):
+        return m.content == '1' and m.channel == ctx.channel
+    
+    msg = await bot.wait_for('message', check=check)
+    await ctx.send('1ページ目です'.format(msg))
         
 #@bot.event 
 #async def on_message(message):
