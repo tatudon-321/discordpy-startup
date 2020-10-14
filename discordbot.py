@@ -63,7 +63,8 @@ async def wait(ctx):
         return m.content == '1' and m.channel == ctx.channel
     
     msg = await bot.wait_for('message', check=check)
-    await ctx.send(text)
+    await ctx.send('未実装です')
+    
     
 @bot.command()
 async def he(ctx):
@@ -71,9 +72,13 @@ async def he(ctx):
     
     def check(m):
         return m.content == '1' and m.channel == ctx.channel
-    
-    msg = await bot.wait_for('message', check=check)
-    await message.edit(content="newcontent")
+
+        try:
+            reaction, user = await bot.wait_for('message_send', timeout=5.0, check=check)
+        except asyncio.TimeoutError:
+            await channel.send('👎')
+        else:
+            await channel.send('👍')
         
 #@bot.event 
 #async def on_message(message):
