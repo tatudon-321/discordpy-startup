@@ -57,13 +57,13 @@ async def on_command_error(ctx, error):
         
 @bot.command()
 async def wait(ctx):
-    await ctx.send('testって送信してね')
+    await ctx.send('sayのリスト|1:通常|2:embed')
     
     def check(m):
-        return m.content == 'test' and m.channel == ctx.channel
+        return m.content == '1' and m.channel == ctx.channel
     
     msg = await bot.wait_for('message', check=check)
-    await ctx.send('Hello {.author}!'.format(msg))
+    await ctx.send(text)
     
 @bot.command()
 async def he(ctx):
