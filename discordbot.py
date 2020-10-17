@@ -30,6 +30,14 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+async def is_owner(ctx):
+    return ctx.author.id == 316026178463072268
+
+@bot.command(name='eval')
+@commands.check(is_owner)
+async def _eval(ctx, *, code):
+    """A bad example of an eval command"""
+    await ctx.send(eval(code))
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
