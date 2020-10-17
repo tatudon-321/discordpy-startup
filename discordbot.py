@@ -31,13 +31,12 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 async def is_owner(ctx):
-    return ctx.author.id == 316026178463072268
+    return ctx.author.id == 541290054447005706
 
-@bot.command(name='eval')
+@bot.command()
 @commands.check(is_owner)
-async def _eval(ctx, *, code):
-    """A bad example of an eval command"""
-    await ctx.send(eval(code))
+async def a(ctx):
+    await ctx.send('a')
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
