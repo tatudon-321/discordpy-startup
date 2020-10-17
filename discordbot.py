@@ -35,8 +35,14 @@ async def is_owner(ctx):
 
 @bot.command()
 @commands.check(is_owner)
+async def "if"(ctx):
+    await ctx.send('::i f')
+    
+@bot.command()
+@commands.check(is_owner)
 async def a(ctx):
-    await ctx.send('a')
+    await ctx.send('::atk')
+    
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
