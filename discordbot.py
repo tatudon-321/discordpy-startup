@@ -35,7 +35,7 @@ async def is_owner(ctx):
 
 @bot.command()
 @commands.check(is_owner)
-async def "if"(ctx):
+async def f(ctx):
     await ctx.send('::i f')
     
 @bot.command()
