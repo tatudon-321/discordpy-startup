@@ -43,6 +43,10 @@ async def f(ctx):
 async def a(ctx):
     await ctx.send('::atk')
     
+@bot.command()
+@commands.check(is_owner)
+async def gm(ctx):
+    await ctx.send(ctx.guild.members)
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
