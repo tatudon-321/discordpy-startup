@@ -47,9 +47,9 @@ async def a(ctx):
 @commands.check(is_owner)
 async def sinfo(ctx):
     embed = discord.Embed(title='this server’s info', color=0x404040)
-    embed.add_field(name=f'サーバー人数:{ctx.guild.members}', value=f'実行者:{ctx.author.id}')
+    embed.add_field(name=f'サーバー人数:{len(ctx.guild.members)}', value=f'実行者:{ctx.author.id}')
     await ctx.send(embed=embed)
-    await ctx.send(len(ctx.guild.members))
+   
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
