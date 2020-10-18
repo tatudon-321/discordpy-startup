@@ -46,7 +46,7 @@ async def a(ctx):
 @bot.command()
 @commands.check(is_owner)
 async def gm(ctx):
-    await ctx.send('このサーバーに参加している人数(botも含む)は'len(ctx.guild.members)'人です')
+    await ctx.send(len(ctx.guild.members)'人です')
     
 #@bot.command()
 #async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
