@@ -46,7 +46,7 @@ async def a(ctx):
 @bot.command()
 @commands.check(is_owner)
 async def sinfo(ctx):
-    embed = discord.Embed(title=f'**{ctx.guild.name}**の情報', color=0x404040)
+    embed = discord.Embed(title=f'**{ctx.guild.name}**の情報',description=ctx.guild.icon_url, color=0x404040)
     embed.add_field(name=f'サーバー人数:{len(ctx.guild.members)}人', value=f'実行者:<@{ctx.author.id}>')
     await ctx.send(embed=embed)
    
