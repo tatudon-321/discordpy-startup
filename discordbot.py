@@ -134,7 +134,7 @@ bot.remove_command("help")
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title='このbotのコマンドのhelpです', color=0x000000)
-    embed.add_field(name='help　このコマンドを表示\n**ping**  botのping速度を測ります\n**invite**  botの招待リンク、公式サーバーのリンクを送信します\n**embed** [text] textに書いたメッセージをembedに載せて送信します\nkick [user] ユーザーをキックできます\nban [user] ユーザーをバンできます',value='製作中です')
+    embed.add_field(name='help　このコマンドを表示\n**ping**  botのping速度を測ります\n**invite**  botの招待リンク、公式サーバーのリンクを送信します\n**embed** [text] textに書いたメッセージをembedに載せて送信します\nkick [user] ユーザーをキックできます\nban [user] ユーザーをバンできます\nsinfo サーバーの情報を送信します',value='製作中です')
     await ctx.send(embed=embed)
 
 @bot.command()
