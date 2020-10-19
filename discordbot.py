@@ -54,7 +54,6 @@ async def sinfo(ctx):
 
 @commands.command(pass_context=True, hidden=True, name='eval')
 async def _eval(self, ctx, *, body: str):
-"""Evaluates a code"""
 env = {
 'bot': self.bot,
 'ctx': ctx,
