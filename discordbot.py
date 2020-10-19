@@ -52,7 +52,6 @@ async def sinfo(ctx):
     await ctx.send(embed=embed)
     
 
-@commands.command(pass_context=True, hidden=True, name='eval')
 
    
     
