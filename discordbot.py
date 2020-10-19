@@ -51,7 +51,11 @@ async def sinfo(ctx):
     embed.set_thumbnail(url=ctx.guild.icon_url)
     await ctx.send(embed=embed)
     
-
+@bot.command()
+async def myinfo(ctx):
+    embed = discord.Embed(title=f'**{ctx.author.name}**の情報', color=0x200000)
+    embed.set_thumbnail(url=ctx.author.icon_url)
+    await ctx.send(embed=embed)
 
    
     
