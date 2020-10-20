@@ -47,7 +47,7 @@ async def a(ctx):
 @bot.command()
 async def sinfo(ctx):
     embed = discord.Embed(title=f'**{ctx.guild.name}**の情報', color=0x404040)
-    embed.add_field(name=f'サーバー人数:{len(ctx.guild.members)}人\nサーバーオーナー:{ctx.guild.owner.name}\nブーストされている回数:{ctx.guild. premium_subscription_count}\nブーストレベル:{ctx.guild.premium_tier}', value=f'実行者:<@{ctx.author.id}>')
+    embed.add_field(name=f'サーバー人数:{len(ctx.guild.members)}人\nサーバーオーナー:{ctx.guild.owner}\nブーストされている回数:{ctx.guild. premium_subscription_count}\nブーストレベル:{ctx.guild.premium_tier}', value=f'実行者:<@{ctx.author.id}>')
     embed.set_thumbnail(url=ctx.guild.icon_url)
     await ctx.send(embed=embed)
     
