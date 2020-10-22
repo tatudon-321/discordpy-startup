@@ -95,8 +95,9 @@ async def ts(ctx):
     else:
         def check(m):
             return m.content == '2' and m.channel == ctx.channel
-        msg = await bot.wait_for('message', check=check)
-        await ctx.send('に')
+       
+    msg = await bot.wait_for('message', check=check)
+    await ctx.send('に')
     
     
 @bot.command()
