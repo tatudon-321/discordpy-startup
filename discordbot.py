@@ -84,14 +84,19 @@ async def myinfo(ctx):
         #await channel.send('Hello {.author}!'.format(msg))
         
 @bot.command()
-async def wait(ctx):
-    await ctx.send('sayのリスト|1:通常|2:embed')
+async def ts(ctx):
+    await ctx.send('say 1 or 2')
     
     def check(m):
         return m.content == '1' and m.channel == ctx.channel
     
     msg = await bot.wait_for('message', check=check)
-    await ctx.send('未実装です')
+    await ctx.send('いち')
+    else:
+        def check(m):
+            return m.content == '2' and m.channel == ctx.channel
+        msg = await bot.wait_for('message', check=check)
+        await ctx.send('に')
     
     
 @bot.command()
