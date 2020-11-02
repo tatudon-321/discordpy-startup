@@ -60,7 +60,7 @@ async def myinfo(ctx):
 @bot.command()
 async def binfo(ctx):
     embed = discord.Embed(title=f'**優姫-ゆき-**の情報', color=0x1f1f1f)
-    embed.add_field(name=f'{len(bot.users)}', value=f'実行者:<@{ctx.author.id}>')
+    embed.add_field(name=f'このbotが認識しているユーザーの数:{len(bot.users)}', value=f'実行者:<@{ctx.author.id}>')
     await ctx.send(embed=embed)
 
    
