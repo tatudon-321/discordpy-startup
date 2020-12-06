@@ -72,12 +72,14 @@ async def kick(ctx, member: discord.Member, *, reason='by優姫-ゆき-'):
     embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x888000)
     await ctx.send(embed=embed)
     
-@bot.command()
+
+bot.command()
 @commands.check(is_owner)
-async def ban(ctx, member: discord.Member, *, reason=text):
-    await member.ban (reason=reason)
-    embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x800000)
+async def ban(ctx, member: discord.Member, *, reason=message):
+    await member.kick (reason=reason)
+    embed = discord.Embed(description=f'**実行者:{ctx.author}**', color=0x888000)
     await ctx.send(embed=embed)
+
     
 #@bot.event
 #async def on_message(message):
